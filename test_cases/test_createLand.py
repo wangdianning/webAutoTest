@@ -10,9 +10,6 @@
 7， 点击登录按钮；
 8，定位错误信息断言
 """
-import time
-import unittest
-import ddt
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
