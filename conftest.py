@@ -4,12 +4,15 @@
 """
 import pytest
 from selenium import webdriver
-
+from selenium.webdriver import ChromeOptions
 
 
 @pytest.fixture(scope="session",autouse=True)
 def get_browser():
-    driver = webdriver.Chrome()
+    options = ChromeOptions()
+    #设置浏览器路径
+    options.binary_location = r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
+    driver = webdriver.Chrome(options = options)
     # 最大化当前页
     driver.maximize_window()
 
